@@ -1,0 +1,8 @@
+#footer {
+  background-color: $brand-first;
+  color: $white;
+  padding: 24px 0;
+  p, a, span {
+    color: $white !important;
+  }
+}

@@ -1,0 +1,31 @@
+#container-header {
+  overflow: hidden;
+  .header {
+    background-image: -webkit-linear-gradient(95deg, #354966 22%, #9463D6 100%);
+    background-image: -o-linear-gradient(95deg, #354966 22%, #9463D6 100%);
+    background-image: linear-gradient(185deg, #354966 22%, #9463D6 100%);
+    left: calc(50% - 50vw);
+    padding: 56px 0;
+    position: relative;
+    width: 100vw;
+    h1 {
+      font-size: 29px;
+    }
+    @media screen and (min-width: 992px){
+      .container{
+        position: relative;
+        &:before {
+          content: '';
+          background: url(https://s3.amazonaws.com/rd-marketing-objects/rdstation/afiliados/header-bg-01.svg);
+          position: absolute;
+          width: 1440px;
+          height: 100%;
+          background-repeat: no-repeat;
+          display: block;
+          background-position: right;
+          left: calc(50% - 720px);
+        }
+      }
+    }
+  }
+}

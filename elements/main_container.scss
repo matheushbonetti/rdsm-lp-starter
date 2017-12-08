@@ -1,0 +1,8 @@
+#container-section {
+  background-image: -webkit-linear-gradient(95deg, #354966 22%, #9463D6 100%);
+  background-image: -o-linear-gradient(95deg, #354966 22%, #9463D6 100%);
+  background-image: linear-gradient(185deg, #354966 22%, #9463D6 100%);
+  &, & * {
+    color: $white;
+  }
+}

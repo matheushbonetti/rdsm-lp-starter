@@ -1,0 +1,28 @@
+.callpage-card {
+    padding: 50px 44px;
+}
+.callpage-card img {
+  width: 80px;
+  height: 80px;
+  margin: 16px;
+}
+.callpage-card h2 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-bottom: 1px dotted #aaa;
+    display: inline;
+    color: #d82f53;
+}
+.callpage-card .lead {
+    margin-top: 24px;
+}
+.callpage-card .lead .number {
+    font-weight: bold;
+    color: #d82f53;
+}
+@media screen and (max-width: 992px) {
+  .callpage-card {
+      padding: 0px;
+  }
+}
