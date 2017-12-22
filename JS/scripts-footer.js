@@ -1,16 +1,19 @@
 <script type="text/javascript">
   $(document).ready(function(){
     // Sets the main color on the resource type element
-    var main_color = $("#container-header").css('backgroundColor');
-    $(".resource_type").css("background-color",main_color);
+    // var main_color = $("#container-header").css('backgroundColor');
+    // $(".resource_type").css("background-color",main_color);
 
     // Sets the conversion button color on the scroll fixed button
-    var cta_color = $("#cf_submit").css('backgroundColor');
-    $(".mobile_fixed").css("background-color",cta_color);
+    // var cta_color = $("#cf_submit").css('backgroundColor');
+    // $(".mobile_fixed").css("background-color",cta_color);
 
     // Sets the current year on the copyright message
     var thisYear = (new Date()).getFullYear();
     $(".copyright-year").text(thisYear);
+
+    // Deletes the social share element
+    $("#social-share").remove();
 
     // Scroll button behavior
     $(".scrollto").click(function (event) {

@@ -14,7 +14,7 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;  
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent; }
 
@@ -3722,7 +3722,7 @@ ul {
 
 .resource_header .row {
   background-color: white;
-  text-align: center;
+  text-align: left;
   margin-top: 16px;
   padding-top: 40px; }
   .resource_header .row h1 {
@@ -3741,6 +3741,10 @@ ul {
     .resource_header .row h1 .invisible {
       width: 0;
       display: inline-block; }
+  .resource_header .row a.button {
+    display: inline-block; }
+  .resource_header .row [class*="col-"] img {
+    max-width: 100%; }
   @media screen and (max-width: 992px) {
     .resource_header .row {
       padding-top: 24px;
@@ -3894,4 +3898,4 @@ ul {
   #footer p, #footer a, #footer a:hover, #footer a:focus, #footer a:active {
     color: #646464; }
 
-/*# sourceMappingURL=lp-css.css.map */
+/*# sourceMappingURL=typ-css.css.map */
