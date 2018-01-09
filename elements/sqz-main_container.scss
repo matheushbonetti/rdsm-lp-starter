@@ -1,0 +1,48 @@
+#container {
+  position: relative !important;
+  height: auto;
+}
+#container-section {
+  box-shadow: none !important;
+  padding: 0 0 80px !important;
+  background: none !important;
+  @include make-container();
+  @include make-container-max-widths();
+  @media screen and (max-width: 768px) {
+    padding: 20px 0 !important;
+  }
+  &>.wrapper {
+    overflow: visible;
+    @media screen and (min-width: 768px) {
+      @include make-row();
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      display: block;
+    }
+    #social-share {
+      display: none;
+    }
+    #fb-root {
+      width: 0;
+      float: left;
+      height: 1px;
+    }
+    div#content.left {
+      display: none;
+    }
+    div#conversion.right {
+      width: 100% !important;
+      float: left !important;
+      margin-top: 0 !important;
+      margin-right: 0 !important;
+      display: block !important;
+      box-shadow: none !important;
+      @extend .col-md-4;
+      @extend .offset-md-4;
+      header {
+        display: none;
+      }
+    }
+  }
+}

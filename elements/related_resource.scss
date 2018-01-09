@@ -1,0 +1,41 @@
+.related_resource {
+  background: $white;
+  border: 1px solid $white;
+  margin-top: 40px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.15);
+  img {
+    object-fit: cover;
+  }
+  .resource_info {
+    padding: 24px 32px;
+    text-align: center;
+    h2 {
+      font-size: 18px;
+      color: $brand-first;
+      line-height: 24px;
+      margin-top: 0;
+      .resource_type {
+        display: inline-block;
+        font-weight: 400;
+        background-color: $brand-first;
+        color: $white;
+        padding: 4px 16px;
+        margin-bottom: 8px;
+        border-radius: 200px;
+      }
+    }
+  }
+}
+@media screen and (min-width:992px) {
+  #content .col-md-8 .related_resource {
+    display: flex;
+    img {
+      width: 50% !important;
+      height: auto !important;
+    }
+    .resource_info {
+      text-align: left;
+      align-self: center;
+    }
+  }
+}

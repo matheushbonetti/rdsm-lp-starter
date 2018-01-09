@@ -1,0 +1,36 @@
+body {
+  background: inherit;
+}
+
+#squeeze-container {
+  position: relative !important;
+  margin-bottom: 80px !important;
+  #conversion {
+    box-shadow: 0 0 8px rgba(0,0,0,0.15) !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    header {
+      padding: 0px 30px 10px !important;
+      figure img {
+        max-width: calc(100% + 58px) !important;
+        width: calc(100% + 58px) !important;
+        padding: 0;
+        margin: 1px -29px 30px !important;
+      }
+      hgroup {
+        h1, h1 span {
+          font-size: 24px;
+          line-height: 32px;
+          color: $brand-first;
+        }
+        h2, h2 span {
+          font-size: 17px;
+          line-height: 24px;
+          color: $black;
+        }
+      }
+    }
+  }
+}

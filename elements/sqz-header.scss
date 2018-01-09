@@ -1,0 +1,34 @@
+#container-header {
+  padding: 0 !important;
+}
+.resource_header .row .col-md-4 {
+  background-color: $brand-gray;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 0px;
+  h1 {
+    color: $brand-first;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    .resource_type {
+      display: inline-block;
+      font-weight: 400;
+      background-color: $brand-first;
+      color: $white;
+      padding: 4px 16px;
+      margin-bottom: 8px;
+      border-radius: 200px;
+    }
+    .invisible {
+      width: 0;
+      display: inline-block;
+    }
+  }
+  img {
+    max-width: calc(100% + 28px);
+    padding: 0;
+    margin: 1px -14px !important;
+  }
+}

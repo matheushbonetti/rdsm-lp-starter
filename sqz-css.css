@@ -342,7 +342,7 @@ template {
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
-.col-sm-auto, .col-md-1, #container-section > .wrapper #fb-root, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, #container-section > .wrapper div#content.left, .col-md,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, #container-section > .wrapper div#conversion.right, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
@@ -626,7 +626,7 @@ template {
     width: auto;
     max-width: none; }
 
-  .col-md-1, #container-section > .wrapper #fb-root {
+  .col-md-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
 
@@ -638,7 +638,7 @@ template {
     flex: 0 0 25%;
     max-width: 25%; }
 
-  .col-md-4 {
+  .col-md-4, #container-section > .wrapper div#conversion.right {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
 
@@ -670,7 +670,7 @@ template {
     flex: 0 0 91.66667%;
     max-width: 91.66667%; }
 
-  .col-md-12, #container-section > .wrapper div#content.left {
+  .col-md-12 {
     flex: 0 0 100%;
     max-width: 100%; }
 
@@ -725,7 +725,7 @@ template {
   .offset-md-3 {
     margin-left: 25%; }
 
-  .offset-md-4 {
+  .offset-md-4, #container-section > .wrapper div#conversion.right {
     margin-left: 33.33333%; }
 
   .offset-md-5 {
@@ -3742,17 +3742,18 @@ ul {
 #container-header {
   padding: 0 !important; }
 
-.resource_header .row {
-  background-color: white;
-  text-align: left;
-  margin-top: 16px;
-  padding-top: 40px; }
-  .resource_header .row h1 {
+.resource_header .row .col-md-4, .resource_header .row #container-section > .wrapper div#conversion.right, #container-section > .wrapper .resource_header .row div#conversion.right {
+  background-color: #f4f5f8;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 0px; }
+  .resource_header .row .col-md-4 h1, .resource_header .row #container-section > .wrapper div#conversion.right h1, #container-section > .wrapper .resource_header .row div#conversion.right h1 {
     color: #415b9c;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 32px;
     margin-bottom: 24px; }
-    .resource_header .row h1 .resource_type {
+    .resource_header .row .col-md-4 h1 .resource_type, .resource_header .row #container-section > .wrapper div#conversion.right h1 .resource_type, #container-section > .wrapper .resource_header .row div#conversion.right h1 .resource_type {
       display: inline-block;
       font-weight: 400;
       background-color: #415b9c;
@@ -3760,26 +3761,13 @@ ul {
       padding: 4px 16px;
       margin-bottom: 8px;
       border-radius: 200px; }
-    .resource_header .row h1 .invisible {
+    .resource_header .row .col-md-4 h1 .invisible, .resource_header .row #container-section > .wrapper div#conversion.right h1 .invisible, #container-section > .wrapper .resource_header .row div#conversion.right h1 .invisible {
       width: 0;
       display: inline-block; }
-  .resource_header .row a.button {
-    display: inline-block;
-    color: white; }
-  .resource_header .row [class*="col-"] img {
-    max-width: 100%;
-    padding: 0; }
-  @media screen and (max-width: 992px) {
-    .resource_header .row {
-      padding-top: 24px;
-      margin-top: 6px;
-      text-align: center; }
-      .resource_header .row h1 {
-        font-size: 24px;
-        line-height: 32px;
-        margin-top: 32px; }
-      .resource_header .row [class*="col-"] img {
-        margin-top: -8px; } }
+  .resource_header .row .col-md-4 img, .resource_header .row #container-section > .wrapper div#conversion.right img, #container-section > .wrapper .resource_header .row div#conversion.right img {
+    max-width: calc(100% + 28px);
+    padding: 0;
+    margin: 1px -14px !important; }
 
 #container {
   position: relative !important;
@@ -3787,9 +3775,8 @@ ul {
 
 #container-section {
   box-shadow: none !important;
-  padding: 80px 0 !important;
-  position: relative;
-  margin-top: 80px;
+  padding: 0 0 80px !important;
+  background: none !important;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -3818,33 +3805,27 @@ ul {
         flex-wrap: wrap;
         margin-right: -15px;
         margin-left: -15px;
-        width: calc(100% + 30px);
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
         display: block; } }
     #container-section > .wrapper #social-share {
       display: none; }
     #container-section > .wrapper #fb-root {
+      width: 0;
       float: left;
       height: 1px; }
     #container-section > .wrapper div#content.left {
-      float: left !important;
+      display: none; }
+    #container-section > .wrapper div#conversion.right {
       width: 100% !important;
+      float: left !important;
       margin-top: 0 !important;
       margin-right: 0 !important;
-      margin-left: 0 !important; }
-      #container-section > .wrapper div#content.left h1 {
-        font-size: 24px;
-        line-height: 32px;
-        text-align: center; }
-    #container-section > .wrapper div#conversion.right {
-      display: none !important; }
-  #container-section:before {
-    content: '';
-    position: absolute;
-    background-color: #f4f5f8;
-    width: 100vw;
-    height: 100%;
-    top: 0;
-    left: calc(50% - 50vw); }
+      display: block !important;
+      box-shadow: none !important; }
+      #container-section > .wrapper div#conversion.right header {
+        display: none; }
 
 .related_resource {
   background: white;
@@ -3945,4 +3926,4 @@ ul {
   #footer p, #footer a, #footer a:hover, #footer a:focus, #footer a:active {
     color: #646464; }
 
-/*# sourceMappingURL=typ-css.css.map */
+/*# sourceMappingURL=sqz-css.css.map */
