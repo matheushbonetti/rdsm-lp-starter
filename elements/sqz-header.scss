@@ -27,7 +27,8 @@
     }
   }
   img {
-    max-width: calc(100% + 28px);
+    max-width: calc(100% + 28px) !important;
+    width: calc(100% + 28px) !important;
     padding: 0;
     margin: 1px -14px !important;
   }

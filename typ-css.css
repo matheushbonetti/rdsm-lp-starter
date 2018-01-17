@@ -3697,7 +3697,7 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
-* {
+*:not(i) {
   font-family: 'Open Sans', sans-serif !important;
   color: #404040;
   font-size: 16px;
@@ -3763,7 +3763,7 @@ ul {
     .resource_header .row h1 .invisible {
       width: 0;
       display: inline-block; }
-  .resource_header .row a.button {
+  .resource_header .row a.button, .resource_header .row .related_resource .resource_info a, .related_resource .resource_info .resource_header .row a {
     display: inline-block;
     color: white; }
   .resource_header .row [class*="col-"] img {
@@ -3851,8 +3851,9 @@ ul {
   border: 1px solid white;
   margin-top: 40px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15); }
-  .related_resource img {
-    object-fit: cover; }
+  .related_resource .resource_image img {
+    object-fit: cover;
+    width: 100% !important; }
   .related_resource .resource_info {
     padding: 24px 32px;
     text-align: center; }
@@ -3873,10 +3874,12 @@ ul {
 @media screen and (min-width: 992px) {
   #content .col-md-8 .related_resource {
     display: flex; }
-    #content .col-md-8 .related_resource img {
-      width: 50% !important;
-      height: auto !important; }
+    #content .col-md-8 .related_resource .resource_image {
+      width: 50% !important; }
+      #content .col-md-8 .related_resource .resource_image img {
+        height: 100% !important; }
     #content .col-md-8 .related_resource .resource_info {
+      width: 50% !important;
       text-align: left;
       align-self: center; } }
 #content img {
@@ -3898,7 +3901,7 @@ ul {
   #conversion #form-spam {
     line-height: 24px; }
 
-.button, #cf_submit {
+.button, .related_resource .resource_info a, #cf_submit {
   background-color: #f45567;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -3920,23 +3923,23 @@ ul {
   vertical-align: middle;
   padding: 15px 20px 17px 20px;
   -webkit-appearance: none; }
-  .button:hover, .button:focus, .button:active, #cf_submit:hover, #cf_submit:focus, #cf_submit:active {
+  .button:hover, .related_resource .resource_info a:hover, .button:focus, .related_resource .resource_info a:focus, .button:active, .related_resource .resource_info a:active, #cf_submit:hover, #cf_submit:focus, #cf_submit:active {
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15) !important;
     color: #FFFFFF !important;
     border: 0 !important;
     text-decoration: none !important; }
-  .button.mobile_fixed, #cf_submit.mobile_fixed {
+  .button.mobile_fixed, .related_resource .resource_info a.mobile_fixed, #cf_submit.mobile_fixed {
     position: fixed;
     width: 100%;
     border-radius: 0;
     bottom: 0;
     left: 0;
     z-index: 99; }
-    .button.mobile_fixed.hidden, #cf_submit.mobile_fixed.hidden {
+    .button.mobile_fixed.hidden, .related_resource .resource_info a.mobile_fixed.hidden, #cf_submit.mobile_fixed.hidden {
       opacity: 0;
       z-index: -1; }
     @media screen and (min-width: 768px) {
-      .button.mobile_fixed, #cf_submit.mobile_fixed {
+      .button.mobile_fixed, .related_resource .resource_info a.mobile_fixed, #cf_submit.mobile_fixed {
         display: none; } }
 
 #footer {

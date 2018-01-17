@@ -3697,7 +3697,7 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
-* {
+*:not(i) {
   font-family: 'Open Sans', sans-serif !important;
   color: #404040;
   font-size: 16px;
@@ -3722,7 +3722,8 @@ body {
 
 #squeeze-container {
   position: relative !important;
-  margin-bottom: 80px !important; }
+  margin-bottom: 80px !important;
+  height: auto !important; }
   #squeeze-container #conversion {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15) !important;
     -webkit-border-radius: 0;

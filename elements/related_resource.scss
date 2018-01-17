@@ -3,8 +3,11 @@
   border: 1px solid $white;
   margin-top: 40px;
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.15);
-  img {
-    object-fit: cover;
+  .resource_image {
+    img {
+      object-fit: cover;
+      width: 100% !important;
+    }
   }
   .resource_info {
     padding: 24px 32px;
@@ -24,16 +27,22 @@
         border-radius: 200px;
       }
     }
+    a {
+      @extend .button;
+    }
   }
 }
 @media screen and (min-width:992px) {
   #content .col-md-8 .related_resource {
     display: flex;
-    img {
+    .resource_image {
       width: 50% !important;
-      height: auto !important;
+      img {
+        height: 100% !important;
+      }
     }
     .resource_info {
+      width: 50% !important;
       text-align: left;
       align-self: center;
     }
