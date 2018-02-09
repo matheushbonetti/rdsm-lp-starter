@@ -1,0 +1,38 @@
+.progress_bar .bar {
+  width: 100%;
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  padding: 2px; }
+.progress_bar .progress {
+  width: 0%;
+  height: 12px;
+  background-color: #415b9c;
+  transition: all 0.5s ease-in-out; }
+  .progress_bar .progress.progress_1 {
+    width: calc(10% - 4px); }
+  .progress_bar .progress.progress_2 {
+    width: calc(20% - 4px); }
+  .progress_bar .progress.progress_3 {
+    width: calc(30% - 4px); }
+  .progress_bar .progress.progress_4 {
+    width: calc(40% - 4px); }
+  .progress_bar .progress.progress_5 {
+    width: calc(50% - 4px); }
+  .progress_bar .progress.progress_6 {
+    width: calc(60% - 4px); }
+  .progress_bar .progress.progress_7 {
+    width: calc(70% - 4px); }
+  .progress_bar .progress.progress_8 {
+    width: calc(80% - 4px); }
+  .progress_bar .progress.progress_9 {
+    width: calc(90% - 4px); }
+.progress_bar .step {
+  text-align: center;
+  margin-top: 8px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-weight: 700; }
+
+/*# sourceMappingURL=progress-bar.css.map */

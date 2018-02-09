@@ -1,0 +1,28 @@
+.progress_bar {
+  .bar {
+    width: 100%;
+    height: 16px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    padding: 2px;
+  }
+  .progress {
+    width: 0%;
+    height: 12px;
+    background-color: rgba(65,91,156,1);
+    transition: all 0.5s ease-in-out;
+    @for $i from 1 to 10 {
+      &.progress_#{$i} {
+        width: calc(#{$i * 10%} - 4px);
+      }
+    }
+  }
+  .step {
+    text-align: center;
+    margin-top: 8px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    font-weight: 700;
+  }
+}

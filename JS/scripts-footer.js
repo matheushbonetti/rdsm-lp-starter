@@ -11,6 +11,10 @@
     // var bg_color = $("#container-header").css('backgroundColor');
     // $("#container").css("background-color",bg_color);
 
+    // Sets the CTA color on the progress bar
+    var cta_color = $("#cf_submit").css('backgroundColor');
+    $(".progress").css("background-color",cta_color);
+
     // Sets the current year on the copyright message
     var thisYear = (new Date()).getFullYear();
     $(".copyright-year").text(thisYear);
