@@ -28,8 +28,7 @@
     div#content.left {
       float: left !important;
       width: 100% !important;
-      margin-top: 0 !important;
-      margin-right: 0 !important;
+      margin: 0 !important;
       @extend .col-md-5;
     }
     div#conversion.right {

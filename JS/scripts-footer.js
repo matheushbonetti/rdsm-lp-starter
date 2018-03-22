@@ -1,12 +1,20 @@
 <script type="text/javascript">
   $(document).ready(function(){
+    // TROCAR ABAIXO OS DADOS DO POST:
+    var NomeDoPost = "Como Aumentar Suas Vendas Com o Atendimento de Chat Online";
+    var LinkDoPost = "https://www.agenciamestre.com/marketing-digital/chat-online-para-vender-mais/";
+    var BotaoDoPost = "Acessar Post";
+
     // Sets the main color on the resource type element
     // var main_color = $("#container-header").css('backgroundColor');
     // $(".resource_type").css("background-color",main_color);
 
     // Sets the conversion button color on the scroll fixed button
-    // var cta_color = $("#cf_submit").css('backgroundColor');
-    // $(".mobile_fixed").css("background-color",cta_color);
+    var cta_color = $("#cf_submit").css('backgroundColor');
+    $(".mobile_fixed").css("background-color",cta_color);
+
+    // Sets the Blog Post CTA do the right Post
+    $(".resource_info").replaceWith("<div class='resource_info'><h2>"+ NomeDoPost +"</h2><a class='button' href='"+ LinkDoPost +"?utm_source=afiliados-rdstation&utm_medium=referral&utm_campaign=afiliados-rdstation'>"+ BotaoDoPost +"</a></div>");
 
     // var bg_color = $("#container-header").css('backgroundColor');
     // $("#container").css("background-color",bg_color);
@@ -32,6 +40,11 @@
         $("#conversion-form :input:visible:enabled:first").focus();
       }
     });
+
+    // removes captcha
+    var form = document.getElementById("conversion-form");
+    var fields = form.getElementsByClassName("field");
+    form.removeChild(fields[fields.length-1]);
 
     // Fixed conversion anchor behavior
     $(window).on('resize scroll', function(){

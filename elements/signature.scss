@@ -1,0 +1,43 @@
+.sign-sentence {
+    margin-top: 64px;
+}
+.signature {
+    position: relative;
+    display: inline-block;
+    margin-top: 44px;
+    margin-left: calc(50% - 144px);
+    &:before {
+        content: "";
+        width: 16px;
+        height: 64px;
+        background-color: $brand-first;
+        position: absolute;
+        display: block;
+        top: 28px;
+        left: 0;
+    }
+    .sign-img {
+      width: 112px;
+      height: 112px;
+      float: left;
+      margin-left: 16px;
+    }
+    .sign-txt {
+      width: 160px;
+      height: 88px;
+      float: left;
+      padding: 16px;
+      background-color: $brand-darker-gray;
+      margin-top: 20px;
+    }
+    .sign-txt .name {
+      color: $brand-first;
+      font-weight:700;
+      margin-bottom: 0;
+    }
+    .sign-txt .role, .sign-txt .phone {
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 0;
+    }
+}

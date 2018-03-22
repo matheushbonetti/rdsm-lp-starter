@@ -1,0 +1,48 @@
+#container > header {
+  padding: 0;
+}
+.alliance_lp_header {
+  background-image: -webkit-linear-gradient(95deg, $brand-second 22%, $brand-third 100%);
+  background-image: -o-linear-gradient(95deg, $brand-second 22%, $brand-third 100%);
+  background-image: linear-gradient(185deg, $brand-second 22%, $brand-third 100%);
+  left: calc(50% - 50vw);
+  padding: 56px 0 0;
+  position: relative;
+  width: 100vw;
+  .hero-container {
+    padding-top: 40px;
+    background: $white;
+  }
+  h1, h1 * {
+    color: $brand-first;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 40px;
+    strong {
+      font-weight: 800;
+    }
+  }
+  p.lead {
+    line-height: 24px;
+    margin: 16px 0 24px;
+  }
+  .button {
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+  .embed-responsive + p {
+    margin-top: 16px;
+  }
+}
+#container-section {
+    margin-top: 0 !important;
+    &>.wrapper:before {
+      content: "";
+      position: absolute;
+      width: calc(100% - 30px);
+      height: 24px;
+      background: $white;
+      top: -80px;
+      left: 15px;
+    }
+}
