@@ -3769,11 +3769,31 @@ ul {
   .alliance_lp_header .embed-responsive + p {
     margin-top: 16px; }
 
-h2 {
+.icon-title {
   color: #415b9c;
   font-size: 26px;
   line-height: 32px; }
 
+.icon-info {
+  margin: 32px 0; }
+
+.icon-info-icon {
+  padding: 0; }
+
+@media screen and (max-width: 576px) {
+  .icon-title {
+    text-align: center; }
+
+  .icon-info [class*="col-"] {
+    text-align: center; }
+
+  .icon-info [class*="col-"] {
+    padding: 0; }
+
+  .icon-info-icon > img {
+    max-width: 100px !important;
+    height: auto;
+    margin: 0 auto 16px; } }
 #container {
   position: relative !important;
   height: auto; }
