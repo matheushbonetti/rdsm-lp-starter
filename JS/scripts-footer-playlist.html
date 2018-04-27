@@ -17,6 +17,30 @@
   </p>
 </div>
 
+<ul class="d-none">
+  <li class="text-desc">
+    <p>Lorem ipsum 1 dolor sit amet.</p>
+  </li>
+  <li class="text-desc">
+    <p>Lorem ipsum 2 dolor sit amet.</p>
+  </li>
+  <li class="text-desc">
+    <p>Lorem ipsum 3 dolor sit amet.</p>
+  </li>
+  <li class="text-desc">
+    <p>Lorem ipsum 4 dolor sit amet.</p>
+  </li>
+  <li class="text-desc">
+    <p>Lorem ipsum 5 dolor sit amet.</p>
+  </li>
+  <li class="text-desc">
+    <p>Lorem ipsum 6 dolor sit amet.</p>
+  </li>
+  <li class="text-desc">
+    <p>Lorem ipsum 7 dolor sit amet.</p>
+  </li>
+</ul>
+
 <script type="text/javascript">
   $("document").ready(function(){
 
@@ -82,7 +106,7 @@
       for(i = 0; i < data.length; i++){ //Do this to each item in the JSON list
         var item = data[i].snippet; //Each Youtube playlist item snippet
         if(!item.thumbnails){continue;} //private videos do no reveal thumbs, so skip them
-        list_data += '<li data-ypt-index="'+ i +'"><p><span><img alt="'+ item.title +'" src="'+ item.thumbnails.medium.url +'"/></span>' + item.title + '</p></li>'; //create an element and add it to the list
+        list_data += '<li data-ypt-index="'+ i +'"><h3><span><img alt="'+ item.title +'" src="'+ item.thumbnails.medium.url +'"/></span>' + item.title + '</h3>'+ $(".text-desc").eq(i).html() +'</li>'; //create an element and add it to the list
       }
       ypt_thumbs.innerHTML = list_data; //After the for loop, insert that list of links into the html
     }
@@ -191,7 +215,7 @@
     categorySlug = string_to_slug(categoryName);
     $("#ypt_thumbs li")
       .slice(categoryFirst, categoryLast)
-      .wrapAll("<div class='col-lg-3 offset-lg-0 col-md-8 offset-md-2 col-10 offset-1 " + categorySlug + "'><div class='card'></div></div>");
+      .wrapAll("<div class='col-lg-5 col-md-8 col-10 " + categorySlug + "'><div class='card'></div></div>");
     $("." + categorySlug + " .card").prepend("<h2>" + categoryName + "</h2>")
   }
 
