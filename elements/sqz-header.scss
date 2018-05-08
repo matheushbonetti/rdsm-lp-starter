@@ -1,7 +1,7 @@
 #container-header {
   padding: 0 !important;
 }
-.resource_header .row .col-md-4 {
+.resource_header .row [class^="col"] {
   background-color: $brand-gray;
   text-align: center;
   margin-top: 40px;

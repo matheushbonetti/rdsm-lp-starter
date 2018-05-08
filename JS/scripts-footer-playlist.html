@@ -19,25 +19,52 @@
 
 <ul class="d-none">
   <li class="text-desc">
-    <p>Lorem ipsum 1 dolor sit amet.</p>
+    <p>Nuestro equipo comercial te da la bienvenida a nuestro Programa de Partners de RD Station</p>
   </li>
   <li class="text-desc">
-    <p>Lorem ipsum 2 dolor sit amet.</p>
+    <p>Cuenta con nuestra Consultora de Nuevos negocios para lo relacionado a:</p>
+    <ul>
+      <li>Prospección de clientes</li>
+      <li>Elaboración de propuestas de servicios de marketing digital</li>
+      <li>Dudas acerca de nuevos clientes que quieras vincular a RD Station</li>
+    </ul>
   </li>
   <li class="text-desc">
-    <p>Lorem ipsum 3 dolor sit amet.</p>
+    <p>Nuestro Consultor de Implementación te ayudará con lo relacionado a:</p>
+    <ul>
+      <li>Primeros pasos con el uso de la herramienta</li>
+      <li>Alcanzar los indicadores de éxito con tu 1er cliente</li>
+      <li>Resolver dudas sobre la estrategia de inbound asociada a RD Station</li>
+    </ul>
   </li>
   <li class="text-desc">
-    <p>Lorem ipsum 4 dolor sit amet.</p>
+    <p>Cuenta tu consultora starter para:</p>
+    <ul>
+      <li>Entendimiento y crecimiento del Partner Program</li>
+      <li>Activación de 2do y 3er cliente</li>
+      <li>Estructuración de un onboarding para tu agencia</li>
+    </ul>
   </li>
   <li class="text-desc">
-    <p>Lorem ipsum 5 dolor sit amet.</p>
+    <p>Con tu gerente de éxito tendrás:</p>
+    <ul>
+      <li>Acompañamiento desde tu entrada en el Partner Program</li>
+      <li>Consultoría estratégica de Inbound Marketing aplicada a RD Station</li>
+      <li>Revisión Periódica de resultados</li>
+    </ul>
   </li>
   <li class="text-desc">
-    <p>Lorem ipsum 6 dolor sit amet.</p>
+    <p>Entra en contacto con nuestro equipo de soporte:</p>
+    <ul>
+      <li>Si tienes dudas con el funcionamiento de la herramienta: Configuraciones iniciales, automatizaciones, integraciones y demás funcionalidades</li>
+    </ul>
   </li>
   <li class="text-desc">
-    <p>Lorem ipsum 7 dolor sit amet.</p>
+    <p>Cuenta con nuestro equipo de Programa de Partners para:</p>
+    <ul>
+      <li>Contenido relacionado al programa como requisitos y beneficios</li>
+      <li>Dudas, comentarios o feedback acerca del programa</li>
+    </ul>
   </li>
 </ul>
 
@@ -106,7 +133,7 @@
       for(i = 0; i < data.length; i++){ //Do this to each item in the JSON list
         var item = data[i].snippet; //Each Youtube playlist item snippet
         if(!item.thumbnails){continue;} //private videos do no reveal thumbs, so skip them
-        list_data += '<li data-ypt-index="'+ i +'"><h3><span><img alt="'+ item.title +'" src="'+ item.thumbnails.medium.url +'"/></span>' + item.title + '</h3>'+ $(".text-desc").eq(i).html() +'</li>'; //create an element and add it to the list
+        list_data += '<li data-ypt-index="'+ i +'"><h3><span><img alt="'+ item.title +'" src="'+ item.thumbnails.medium.url +'"/></span>' + item.title + '</h3><div class="video-desc">'+ $(".text-desc").eq(i).html() +'</div></li>'; //create an element and add it to the list
       }
       ypt_thumbs.innerHTML = list_data; //After the for loop, insert that list of links into the html
     }
@@ -213,9 +240,9 @@
     categoryFirst = categoryFirst - 1;
     categoryLast = categoryLast;
     categorySlug = string_to_slug(categoryName);
-    $("#ypt_thumbs li")
+    $("[data-ypt-index]")
       .slice(categoryFirst, categoryLast)
-      .wrapAll("<div class='col-lg-5 col-md-8 col-10 " + categorySlug + "'><div class='card'></div></div>");
+      .wrapAll("<div class='col-lg-3 col-md-8 col-10 " + categorySlug + "'><div class='card'></div></div>");
     $("." + categorySlug + " .card").prepend("<h2>" + categoryName + "</h2>")
   }
 

@@ -3960,6 +3960,17 @@ h2 {
           mix-blend-mode: luminosity; }
         .ypt_thumbs li.ypt-now-playing h3 span:after, .ypt_thumbs li.ypt-now-playing h3 span:before {
           content: none; }
+    .ypt_thumbs li .video-desc p {
+      font-size: 14px !important;
+      line-height: 24px; }
+    .ypt_thumbs li .video-desc ul {
+      padding-left: 18px !important;
+      margin-top: 0 !important; }
+      .ypt_thumbs li .video-desc ul li {
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 0 !important;
+        list-style: disc !important; }
 
 .info-partner-advance {
   padding: 80px 0; }
