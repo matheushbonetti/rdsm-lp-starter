@@ -3726,7 +3726,7 @@ ul {
   padding: 10px 0;
   text-align: center;
   width: 100vw;
-  padding: 30px 0;
+  padding: 20px 0;
   position: relative;
   left: calc(50% - 50vw); }
   .brand_header img {
@@ -3765,7 +3765,8 @@ ul {
       display: inline-block; }
   .resource_header .row a.button, .resource_header .row .related_resource .resource_info a, .related_resource .resource_info .resource_header .row a {
     display: inline-block;
-    color: white; }
+    color: white;
+    margin: 8px 4px 0 0; }
   .resource_header .row [class*="col-"] img {
     max-width: 100%;
     padding: 0; }
@@ -3829,8 +3830,8 @@ ul {
       float: left !important;
       width: 100% !important;
       margin-top: 0 !important;
-      margin-right: 0 !important;
-      margin-left: 0 !important; }
+      margin-right: 15px !important;
+      margin-left: 15px !important; }
       #container-section > .wrapper div#content.left h1 {
         font-size: 24px;
         line-height: 32px;
@@ -3849,7 +3850,7 @@ ul {
 .related_resource {
   background: white;
   border: 1px solid white;
-  margin-top: 40px;
+  margin-top: 0px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15); }
   .related_resource .resource_image img {
     object-fit: cover;
