@@ -5,10 +5,12 @@
   margin-top: 0px;
   margin-bottom: 60px;
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.15);
-  height: calc(100% - 60px);
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  &:not(.unflex) {
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
   .resource_intro {
     background-color: #f4f5f8;
   }
@@ -17,7 +19,7 @@
     font-size: 14px;
     font-weight: bold;
     text-align: center;
-    padding: 16px 0 8px;
+    padding: 16px 16px 8px;
     margin-bottom: 0;
   }
   p {
@@ -55,6 +57,32 @@
     }
     a {
       @extend .button;
+    }
+  }
+  &.blog_posts {
+    .resource_intro p {
+      padding-bottom: 24px;
+    }
+    .resource_info {
+      a, a:hover, a:focus, a:active {
+        text-transform: none !important;
+        text-align: left !important;
+        background: none !important;
+        box-shadow: none !important;
+        color: #415b9b !important;
+        text-shadow: none !important;
+        text-decoration: underline;
+        line-height: 24px;
+        padding: 0px 0px 24px;
+      }
+      a:hover {
+        color: #5576c7 !important;
+      }
+      a .resource_type {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 0 8px;
+      }
     }
   }
 }

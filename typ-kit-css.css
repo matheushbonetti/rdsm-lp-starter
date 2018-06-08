@@ -3816,9 +3816,6 @@ ul {
   @media (min-width: 1200px) {
     #container-section {
       max-width: 1140px; } }
-  @media screen and (max-width: 768px) {
-    #container-section {
-      padding: 20px 0 !important; } }
   #container-section > .wrapper {
     overflow: visible; }
     @media screen and (min-width: 768px) {
@@ -3861,11 +3858,12 @@ ul {
   border: 1px solid white;
   margin-top: 0px;
   margin-bottom: 60px;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
-  height: calc(100% - 60px);
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column; }
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15); }
+  .kit_resource:not(.unflex) {
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; }
   .kit_resource .resource_intro {
     background-color: #f4f5f8; }
   .kit_resource p.lead {
@@ -3873,7 +3871,7 @@ ul {
     font-size: 14px;
     font-weight: bold;
     text-align: center;
-    padding: 16px 0 8px;
+    padding: 16px 16px 8px;
     margin-bottom: 0; }
   .kit_resource p {
     text-align: center;
@@ -3904,6 +3902,24 @@ ul {
         padding: 4px 16px;
         margin-bottom: 8px;
         border-radius: 200px; }
+  .kit_resource.blog_posts .resource_intro p {
+    padding-bottom: 24px; }
+  .kit_resource.blog_posts .resource_info a, .kit_resource.blog_posts .resource_info a:hover, .kit_resource.blog_posts .resource_info a:focus, .kit_resource.blog_posts .resource_info a:active {
+    text-transform: none !important;
+    text-align: left !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: #415b9b !important;
+    text-shadow: none !important;
+    text-decoration: underline;
+    line-height: 24px;
+    padding: 0px 0px 24px; }
+  .kit_resource.blog_posts .resource_info a:hover {
+    color: #5576c7 !important; }
+  .kit_resource.blog_posts .resource_info a .resource_type {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 0 8px; }
 
 @media screen and (min-width: 992px) {
   #content .col-md-8 .kit_resource {

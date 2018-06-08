@@ -9,9 +9,6 @@
   margin-top: 80px;
   @include make-container();
   @include make-container-max-widths();
-  @media screen and (max-width: 768px) {
-    padding: 20px 0 !important;
-  }
   &>.wrapper {
     overflow: visible;
     @media screen and (min-width: 768px) {
