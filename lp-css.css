@@ -3697,7 +3697,7 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
-* {
+*:not(i) {
   font-family: 'Open Sans', sans-serif !important;
   color: #404040;
   font-size: 16px;
@@ -3758,7 +3758,7 @@ ul {
   padding: 10px 0;
   text-align: center;
   width: 100vw;
-  padding: 30px 0;
+  padding: 20px 0;
   position: relative;
   left: calc(50% - 50vw); }
   .brand_header img {
@@ -3816,8 +3816,7 @@ ul {
     #container-section > .wrapper div#content.left {
       float: left !important;
       width: 100% !important;
-      margin-top: 0 !important;
-      margin-right: 0 !important; }
+      margin: 0 !important; }
     #container-section > .wrapper div#conversion.right {
       width: 100% !important;
       float: left !important;
@@ -3846,6 +3845,9 @@ ul {
     padding: 30px 15px 20px; }
   #conversion #form-spam {
     line-height: 24px; }
+  #conversion .notice a {
+    font-size: 12px;
+    text-decoration: underline; }
 
 .button, #cf_submit {
   background-color: #f45567;
@@ -3853,7 +3855,7 @@ ul {
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px !important;
-  color: #FFFFFF;
+  color: white !important;
   letter-spacing: 1px;
   text-transform: uppercase;
   border: 0 !important;
